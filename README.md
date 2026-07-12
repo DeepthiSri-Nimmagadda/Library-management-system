@@ -84,4 +84,4 @@ This project helped me understand how a real-world library management system wor
 ## Author
 **Deepthisri Nimmagadda**
 B.Tech Student
-If you found this project useful or interesting, feel free to give it a ⭐ on GitHub.
+
