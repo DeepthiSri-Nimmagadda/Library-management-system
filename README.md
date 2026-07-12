@@ -52,6 +52,37 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+##Code
+
+Import tkinter as tk
+students = []
+def add_student():
+    name = entry.get()
+    if name:
+        students.append(name)
+        listbox.insert(END, name + " - Present")
+        entry.delete(0, END)
+def delete_student():
+    selected = listbox.curselection()
+    if selected:
+        listbox.delete(selected)
+        students.pop(selected[0])
+def clear_attendance():
+    listbox.delete(0, END)
+    students.clear()
+root = tk.Tk()
+root.title("Attendance Management System")
+root.geometry("600x600")
+Label(root, text="Student Name").pack(pady=5)
+entry = Entry(root, width=25)
+entry.pack(pady=5)
+Button(root, text="Add Student", command=add_student).pack(pady=5)
+listbox = Listbox(root, width=40, height=10)
+listbox.pack(pady=10)
+Button(root, text="Delete Student", command=delete_student).pack(pady=5)
+Button(root, text="Clear Attendance", command=clear_attendance).pack(pady=5)
+root.mainloop()
+
 ## Screenshots
 You can add screenshots of the application here.
 - Home Page
